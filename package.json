@@ -1,0 +1,26 @@
+{
+  "name": "ead-node",
+  "version": "0.0.1",
+  "description": "Api de plataforma ead",
+  "main": "index.js",
+  "scripts": {
+    "test": "teste",
+    "start": "nodemon src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CristoferPortela/Ead-node.git"
+  },
+  "author": "cristoferportela@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CristoferPortela/Ead-node/issues"
+  },
+  "homepage": "https://github.com/CristoferPortela/Ead-node#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^20.0.1"
+  }
+}
