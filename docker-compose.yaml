@@ -4,8 +4,9 @@ services:
   mongo:
     image: mongo
     restart: 'always'
+    container_name: "eadapi-mongo"
     volumes: 
-      - ./.dbcache/mongo/data:data/db
+      - ./.dbcache/mongo/data:/data/db
     ports:
       - "27017:27017"
     networks:
@@ -15,6 +16,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
   api:
     image: node:12.19-slim
+    container_name: "eadapi-api"
     ports:
       - "5000:5000"
     working_dir: "/home/node/app"
