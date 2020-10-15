@@ -1,14 +1,16 @@
 /**
- * Bonjour! Here is the start point of the api
+ * Bonjour! Aqui é onde toda a api vai iniciar
  */
 
-const Hapi = require('@hapi/hapi');
+require( 'dotenv-safe' ).config();
+const server = require('./server');
+require( './services/mongo.service' );
 
+/**
+ * Iniciando nossa aplicação, aqui é a função principal do hapi
+ */
 const init = async () => {
-   const server = Hapi.server({
-      port: 5000,
-      host: 'localhost',
-   });
+
 
    server.route({
       method: 'GET',
